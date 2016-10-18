@@ -55,7 +55,7 @@ Packets received:
   192.168.0.2 -> 192.168.0.1 = 1 packet
 ```
 パケットの送受信関係から，きちんと転送されていることを確認した． 
-コントローラの動作については，各手順で画像のように動作している．  
+コントローラの動作については，各手順で画像のように動作している．
 ![flow](https://github.com/handai-trema/learning-switch-Shu-NISHIKORI/tree/master/reports/20161012/flow.jpg "flow")
 
 同様に，スイッチ2についても動作実験を行った．  
@@ -91,5 +91,5 @@ Packets received:
   192.168.0.4 -> 192.168.0.3 = 1 packet
 ```
 
-最後に，host1からhost4に送信する場合を考える．スイッチ1からコントローラにpacket_in()を要請した後，コントローラはスイッチ1にflood命令を出すが，スイッチ1にhost4は接続されていないため，到達することは無い（画像参照）．よって，確かにスイッチごとに独立していることが分かる．  
+最後に，host1からhost4に送信する場合を考える．スイッチ1からコントローラにpacket_in()を要請した後，コントローラはスイッチ1にflood命令を出すが，スイッチ1にhost4は接続されていないため，到達することは無い（画像参照）．よって，確かにスイッチごとに独立していることが分かる．
 ![error](https://github.com/handai-trema/learning-switch-Shu-NISHIKORI/tree/master/reports/20161012/error.jpg "error")
