@@ -4,7 +4,7 @@
 単一スイッチの場合と異なっていることとして，start()時にFDBを配列として複数用意している．そのため，スイッチとコントローラを接続する際，switch_ready()でdatapathごとのFDBを作る．それぞれのdatapathのFDBに対してpacket_in(), packet_out(), flow_mod()が行われる．これらの関数の動作は単一スイッチのみ対応のものと変わらないが，呼び出される際はdatapathを指定して行われる．  
 
 #動作確認
-用意されていたtrema.multi.confを少し簡略化してtrema.multi_simple.conf用いて動作確認を行った．
+用意されていたtrema.multi.confを少し簡略化して動作確認を行った．
 ```
 vswitch('lsw1') { datapath_id 0x1 }
 vswitch('lsw2') { datapath_id 0x2 }
@@ -91,5 +91,5 @@ Packets received:
   192.168.0.4 -> 192.168.0.3 = 1 packet
 ```
 
-最後に，host1からhost4に送信する場合を考える．スイッチ1からコントローラにpacket_in()を要請した後，コントローラはスイッチ1にflood命令を出すが，スイッチ1にhost4は接続されていないため，到達することは無い．よって，確かにスイッチごとに独立していることが分かる．  
+最後に，host1からhost4に送信する場合を考える．スイッチ1からコントローラにpacket_in()を要請した後，コントローラはスイッチ1にflood命令を出すが，スイッチ1にhost4は接続されていないため，到達することは無い（画像参照）．よって，確かにスイッチごとに独立していることが分かる．  
 ![error](https://github.com/handai-trema/learning-switch-Shu-NISHIKORI/tree/master/reports/20161012/error.jpg "error")
