@@ -4,7 +4,7 @@
 単一スイッチの場合と異なっていることとして，start()時にFDBを配列として複数用意している．そのため，スイッチとコントローラを接続する際，switch_ready()でdatapathごとのFDBを作る．それぞれのdatapathのFDBに対してpacket_in(), packet_out(), flow_mod()が行われる．これらの関数の動作は単一スイッチのみ対応のものと変わらないが，呼び出される際はdatapathを指定して行われる．  
 
 #動作確認
-用意されていたtrema.multi.confを少し簡略化してtrema.multi_simple.conf用いて動作確認を行った．
+用意されていたtrema.multi.confを少し簡略化してtrema.multi_simple.conf用いて動作確認を行った．aaaaaaaaaaaaaaaa
 ```
 vswitch('lsw1') { datapath_id 0x1 }
 vswitch('lsw2') { datapath_id 0x2 }
