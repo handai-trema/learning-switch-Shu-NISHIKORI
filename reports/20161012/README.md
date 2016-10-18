@@ -20,7 +20,7 @@ link 'lsw2', 'host3'
 link 'lsw2', 'host4'
 ```
 この場合のコントローラとスイッチの接続は以下のようになる．
-![fig1](https://github.com/handai-trema/learning-switch-Shu-NISHIKORI/tree/master/reports/20161012/topology.jpg)
+![topology](https://github.com/handai-trema/learning-switch-Shu-NISHIKORI/tree/master/reports/20161012/topology.jpg "topology")
 
 以下のように動作させた．  
 1. host1からhost2へパケットを送信する．  
