@@ -1,7 +1,7 @@
 ###第1問  
 ##解答  
 #関数解説
-start()時にFDBを配列として複数用意する．スイッチとコントローラを接続する際，switch_ready()でdatapathごとのFDBを作る．それぞれのdatapathのFDBに対してpacket_in(), packet_out(), flow_mod()が行われる．これらの関数の動作は単一スイッチのみ対応のものと変わらないが，呼び出される際はdatapathを指定して行われる．  
+単一スイッチの場合と異なっていることとして，start()時にFDBを配列として複数用意している．そのため，スイッチとコントローラを接続する際，switch_ready()でdatapathごとのFDBを作る．それぞれのdatapathのFDBに対してpacket_in(), packet_out(), flow_mod()が行われる．これらの関数の動作は単一スイッチのみ対応のものと変わらないが，呼び出される際はdatapathを指定して行われる．  
 
 #動作確認
 用意されていたtrema.multi.confを少し簡略化してtrema.multi_simple.conf用いて動作確認を行った．
@@ -20,12 +20,12 @@ link 'lsw2', 'host3'
 link 'lsw2', 'host4'
 ```
 この場合のコントローラとスイッチの接続は以下のようになる．
-![fig1](https://github.com/handai-trema/learning-switch-Shu-NISHIKORI/blob/reports/topology.jpg)
+![fig1](https://github.com/handai-trema/learning-switch-Shu-NISHIKORI/tree/master/reports/20161012/topology.jpg)
 
-以下のように動作させた．
-1. host1からhost2へパケットを送信する．
-2. host2からhost1へパケットを送信する．
-3. host1からhost2へパケットを送信する．
+以下のように動作させた．  
+1. host1からhost2へパケットを送信する．  
+2. host2からhost1へパケットを送信する．  
+3. host1からhost2へパケットを送信する．  
 結果は以下のようになった．
 ```
 $ ./bin/trema send_packets --source host1 --dest host2
@@ -54,7 +54,7 @@ Packets received:
   192.168.0.1 -> 192.168.0.2 = 2 packet
   192.168.0.2 -> 192.168.0.1 = 1 packet
 ```
-きちんと転送されていることを確認した． 
+パケットの送受信関係から，きちんと転送されていることを確認した． 
 
 同様に，スイッチ2についても動作実験を行った．  
 1. host3からhost4へパケットを送信する．  
