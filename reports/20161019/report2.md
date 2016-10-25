@@ -1,9 +1,9 @@
-##解答
+#解答
 コードを以下に示す．  
-* [./lib/patch_panel.rb](https://github.com/handai-trema/patch-panel-Shu-NISHIKORI/blob/develop/reports/20161019/patch_panel.rb)  
-* [./bin/patch_panel](https://github.com/handai-trema/patch-panel-Shu-NISHIKORI/blob/develop/reports/20161019/patch_panel)  
+* [./lib/patch_panel.rb](https://github.com/handai-trema/learning-switch-Shu-NISHIKORI/blob/develop/reports/20161019/patch_panel.rb)  
+* [./bin/patch_panel](https://github.com/handai-trema/learning-switch-Shu-NISHIKORI/blob/develop/reports/20161019/patch_panel)  
 
-#ミラーリング
+###ミラーリング
 patch_panel.rbには以下のコードを追加した．  
 ```
   def create_mirror(dpid, port_a, port_b)  
@@ -79,7 +79,7 @@ patch_panel.rbには以下のコードを追加した．
 patch_panel中で配列の中身を表示させるよう使用することを想定して，patch_panel.rbを作成した．  
 patch，mirrorそれぞれを別の関数として動作させているので，実装はしていないがpatch，mirrorそれぞれのみを表示させるコマンドを作成することも容易である．  
 
-#動作確認
+###動作確認
 ```
 $ ./bin/patch_panel create 0xabc 1 2
 $ ./bin/patch_panel m_create 0xabc 1 3
