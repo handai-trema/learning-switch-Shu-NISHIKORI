@@ -1,7 +1,7 @@
 ##解答
 コードを以下に示す．  
-* [./lib/patch_panel.rb](https://github.com/handai-trema/patch-panel-Shu-NISHIKORI/blob/master/lib/patch_panel.rb)  
-* [./lib/patch_panel.rb](https://github.com/handai-trema/patch-panel-Shu-NISHIKORI/blob/master/bin/patch_panel)  
+* [./lib/patch_panel.rb](https://github.com/handai-trema/patch-panel-Shu-NISHIKORI/blob/develop/reports/20161019/patch_panel.rb)  
+* [./bin/patch_panel](https://github.com/handai-trema/patch-panel-Shu-NISHIKORI/blob/develop/reports/20161019/patch_panel)  
 
 #ミラーリング
 patch_panel.rbには以下のコードを追加した．  
